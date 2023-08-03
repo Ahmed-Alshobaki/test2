@@ -11,10 +11,25 @@ class zon1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(child: TextButton(onPressed: () {
-       Get.toNamed(routes.zon1);
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TextButton(onPressed: (){
+                Get.defaultDialog(
+                  title: "تحذير",
+                  middleText: "test",
+                 textCancel: "no",textConfirm: "yes",
+                  onCancel: (){
+                    print("object");
+                  },
 
-      }, child: Text("1"),),),
+                );
+            }, child: Text("add"))
+          ],
+        ),
+      ),
     );
   }
 }
