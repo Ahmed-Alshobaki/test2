@@ -18,10 +18,20 @@ class zon1 extends StatelessWidget {
           children: [
             TextButton(
                 onPressed: () {
-                  Get.snackbar("tital", "message",
-                      backgroundColor: Colors.red, colorText: Colors.white,borderColor: Colors.black,borderWidth: 2,onTap: (Get){
-                    print(Get);
-                      });
+                  Get.bottomSheet(
+                      Container(
+                        padding: EdgeInsetsDirectional.all(15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        height: 200,
+                        width: 200,
+
+                        child: Text("zon"),
+                      ),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(200))
+                  );
                 },
                 child: Text("add"))
           ],
