@@ -16,17 +16,14 @@ class zon1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextButton(onPressed: (){
-                Get.defaultDialog(
-                  title: "تحذير",
-                  middleText: "test",
-                 textCancel: "no",textConfirm: "yes",
-                  onCancel: (){
-                    print("object");
-                  },
-
-                );
-            }, child: Text("add"))
+            TextButton(
+                onPressed: () {
+                  Get.snackbar("tital", "message",
+                      backgroundColor: Colors.red, colorText: Colors.white,borderColor: Colors.black,borderWidth: 2,onTap: (Get){
+                    print(Get);
+                      });
+                },
+                child: Text("add"))
           ],
         ),
       ),
